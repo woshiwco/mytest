@@ -8,12 +8,11 @@ public class TestTranslate3 {
     @Test
     public void test() {
         Translate translate = TranslateOptions.getDefaultInstance().getService();
-        Detection hello = translate.detect("hello");
-        System.out.println(hello.getLanguage());
+        Detection language = translate.detect("hello");
         Translation translation = translate.translate("hello world.",
                 Translate.TranslateOption.sourceLanguage("en"),
                 Translate.TranslateOption.targetLanguage("zh"),
                 Translate.TranslateOption.model("base"));
-        System.out.println(translation.getTranslatedText());
+        String translatedText = translation.getTranslatedText();
     }
 }
