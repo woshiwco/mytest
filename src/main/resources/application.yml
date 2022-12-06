@@ -1,18 +1,2 @@
 server:
-  port: $port$
-  servlet:
-    context-path: $contextPath$
 
-spring:
-  application:
-    name: $applicationName$
-  profiles:
-    include: $names$
-
-mybatis:
-  mapper-locations: $locations$
-
-logging:
-  level:
-    root: info
-    $End$
